@@ -1,0 +1,5 @@
+What happens when you initialize a repository? Why do you need to do it?
+	Well, a git reporsitory for the files in the current folder are created. It will now allow me to keep track of changes in any of the files by saving a snapshot of all the files in the directory whenever I choose to commit.
+
+How is the staging area different from the working directory and the repository? what values do you think it offers?
+	While repository contains the file versions that I have chosen to commit, the staging area acts as the name suggests, i.e. to place the files temporarily before commit is actually made. On the other hand, working directory just contains the file version that I am currently on, and does not have past versions of the file.
