@@ -3,3 +3,18 @@ What happens when you initialize a repository? Why do you need to do it?
 
 How is the staging area different from the working directory and the repository? what values do you think it offers?
 	While repository contains the file versions that I have chosen to commit, the staging area acts as the name suggests, i.e. to place the files temporarily before commit is actually made. On the other hand, working directory just contains the file version that I am currently on, and does not have past versions of the file.
+
+How can you use the stagning area to make sure you have one commit per logical change?
+	Oh man... this is a tough question to answer. Hmm, let me see. I can make changes to a file and save this version in the staging area. I can then work on other files. After working on these files, I can decide if the changes to these other files fall in the same logical change as the file in the stagning directory. If so, I can move this other file to the staging directory and commit them. If not, I can go ahead and commit the file in the staging directory and then stage the other file and then commit it separately as it involved a different logical change compared to the first file.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+	Branches would be helpful when I want to work on experimental changes to one or more of the files. It will keep my history organized by having different branches for the main or master version, and a different branch for experimental versions.
+
+How do the diagrams help you visualize the brach structure?
+	First of all, the diagrams or graph shown by git when I type the command "git graph branch1name branch2name" is very useful to understand or to view how the master branch has diverged into other branches. Drawing the diagrams makes it clear how git keeps trach of the various commits in each of these branches. It is surprising to learn that a branch can get lost if it is created, but I have moved on further commits which have added to the master branch; so now usiing git log to view the commits does not give me the commits creater on this other branch. What a load of bullshit.
+
+What is the result of merging two branches together?
+	For merging two files, git uses a process to decide what lines to keep and what lines to delete based on what the original file before branching contained and the changes that were undertaken in the branches. For instance, if a line in the original file was removed by a user working on branch1, then it must clearly not be present in the merged version. On the other hand, if a line was added in branch2, then it must be present in the merged version. All lines that were left unaltered in the two braches are retained into the merged file.
+
+why do we represent it in the diagram the way we do?
+	Firstly, it helps visualized after what commit the branches were created. Secondly, this is the way git keeps track of the commit ids present in the log.
