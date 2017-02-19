@@ -18,3 +18,7 @@ What is the result of merging two branches together?
 
 why do we represent it in the diagram the way we do?
 	Firstly, it helps visualized after what commit the branches were created. Secondly, this is the way git keeps track of the commit ids present in the log.
+
+what are the pros and cons of Git's automatic merging vs. always doing merges manually?
+	Always doing merges manually is just not feasible when there are hundereds or thousands of lines of code or text involved. However, it does allow control over conflicts, i.e. cases where the two files being merged have lines that belong to the same function but have been modified differently.
+	Git's automatic merge leaves the prerogative to the system under certain rules of merging. Though it will not be smart enough to resolve conflicts, I don't see this aspect as a negative point to the merge feature. Merging works excellently with the combination of auto and manual merge.
